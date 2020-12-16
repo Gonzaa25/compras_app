@@ -2,8 +2,7 @@ import 'package:compras_app/model/shoppingcard.dart';
 import 'package:compras_app/model/struct.dart';
 import 'package:compras_app/providers/page_provider.dart';
 import 'package:compras_app/providers/shoppinglist_provider.dart';
-import 'package:compras_app/providers/theme_provider.dart';
-import 'package:flutter/gestures.dart';
+import 'package:compras_app/views/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -119,9 +118,6 @@ class HomePage extends StatelessWidget {
                   itemCount: listas.mislistas.length,
                   padding: EdgeInsets.all(12),
                   itemBuilder: (context, index) {
-                    // print('para la lista  $index hay '+listas.mislistas[index].productos
-                    //     .where((element) => element.comprado == true)
-                    //     .length.toString()+' items comprados');
                     return ShoppingCard(
                         lista: listas.mislistas[index], index: index);
                   }),
@@ -204,11 +200,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-class SettingsPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
